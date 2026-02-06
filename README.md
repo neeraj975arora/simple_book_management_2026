@@ -216,8 +216,8 @@ If you see the book table listed, your database has been initialized successfull
    ```python
    db_config = {
        'host': 'localhost',
-       'user': 'your-postgres-username',  # Default is often 'postgres'
-       'password': 'your-postgres-password',
+       'user': 'postgres',  # Default is often 'postgres'
+       'password': 'yourpassword',
        'dbname': 'demo_flask'
    }
    ```
