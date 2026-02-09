@@ -157,6 +157,7 @@ The `requirements.txt` file contains all necessary Python packages:
    **Create the book table:**
 
    ```sql
+  \c demo_flask;
   CREATE TABLE book (
     id SERIAL PRIMARY KEY,
     publisher VARCHAR(255) NOT NULL,
