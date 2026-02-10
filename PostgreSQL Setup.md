@@ -32,7 +32,7 @@ TCP/IP connections
 
 # 4️⃣ Create Application Database User (Recommended)
 
-CREATE ROLE book_user LOGIN PASSWORD 'bookpassword';       -- Creates a dedicated DB user
+CREATE ROLE book_user LOGIN PASSWORD 'bookpassword';   -- Creates a dedicated DB user
 
 ⚠️ Avoid using postgres user in applications.
 
