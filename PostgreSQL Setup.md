@@ -10,6 +10,7 @@ This README explains:
 ## 1️⃣ Install PostgreSQL
 
 sudo apt update
+
 sudo apt install postgresql postgresql-contrib
 
 #  2️⃣ Switch to PostgreSQL Admin User
