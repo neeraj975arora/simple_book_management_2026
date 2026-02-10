@@ -23,7 +23,7 @@ This uses peer authentication (Linux user → PostgreSQL user)
 
 # 3️⃣ Set Password for PostgreSQL Superuser
 
-ALTER USER postgres WITH PASSWORD 'yourpassword'; -- Sets password for postgres user
+ALTER USER postgres WITH PASSWORD 'yourpassword';   -- Sets password for postgres user
 
 This password is required for:
 Flask apps
@@ -32,7 +32,7 @@ TCP/IP connections
 
 # 4️⃣ Create Application Database User (Recommended)
 
-CREATE ROLE book_user LOGIN PASSWORD 'bookpassword'; -- Creates a dedicated DB user
+CREATE ROLE book_user LOGIN PASSWORD 'bookpassword';       -- Creates a dedicated DB user
 
 ⚠️ Avoid using postgres user in applications.
 
@@ -45,11 +45,12 @@ CREATE DATABASE book_db OWNER book_user; -- Creates database owned by app user
 # 7️⃣ Create Book Table
 
 CREATE TABLE book (
-    id SERIAL PRIMARY KEY,                 -- Auto-increment primary key
-    publisher VARCHAR(255) NOT NULL,       -- Publisher name
-    name VARCHAR(255) NOT NULL,            -- Book name
-    date DATE NOT NULL,                    -- Published date
-    cost DECIMAL(10, 2) NOT NULL           -- Book cost
+
+    id SERIAL PRIMARY KEY, 
+    publisher VARCHAR(255) NOT NULL,       
+    name VARCHAR(255) NOT NULL,            
+    date DATE NOT NULL,                    
+    cost DECIMAL(10, 2) NOT NULL           
 );
 
 # 8️⃣ Default pg_hba.conf (NO CHANGES REQUIRED for Local Setup)
@@ -69,6 +70,7 @@ Local Docker containers
 
 # 9️⃣ Flask Database Configuration (Local)
 db_config = {
+
     "host": "localhost",
     "user": "book_user",
     "password": "bookpassword",
